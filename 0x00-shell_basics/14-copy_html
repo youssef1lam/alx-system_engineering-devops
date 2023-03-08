@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ..
+for file in $(find "$(pwd -P)/." -name '*.html' -type f)
+do
+    filename=$(basename "$file")
+    if [ ! -e "$filename" -o "$file" -nt "$filename" ]
+    then
+        cp "$file" .
+        echo "Copied $filename to $(pwd)"
+    fi
+done
