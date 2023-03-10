@@ -1,2 +1,2 @@
 #!/bin/bash
-{ printf "./, ../, "; ls -1a | LC_COLLATE=C sort -df | awk '{if ($0 == "." || $0 == "..") next; if ($0 ~ /\/$/) {print $0"/, "} else {print $0", "}}' | tr -d '\n'; echo ""; } | sed 's/,\s$/\n/'
+ls -amvp
