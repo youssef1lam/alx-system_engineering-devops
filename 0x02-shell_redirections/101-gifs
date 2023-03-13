@@ -1,0 +1,2 @@
+#!/bin/bash
+find . \( -type f -name "*.txt" -o -type f -name ".*.txt" \)
